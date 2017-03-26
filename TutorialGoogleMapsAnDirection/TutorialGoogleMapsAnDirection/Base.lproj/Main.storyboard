@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cnn-67-CWu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TutorialGoogleMapsAnDirection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="krm-Io-rS7">
+                                <rect key="frame" x="81" y="76" width="214" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhE-NF-erZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XhE-NF-erZ" secondAttribute="height" multiplier="1:1" id="Vcj-ua-oMk"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_walking"/>
+                                        <connections>
+                                            <action selector="walking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hu1-HU-Mp4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brz-Q9-HfT">
+                                        <rect key="frame" x="58" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="brz-Q9-HfT" secondAttribute="height" multiplier="1:1" id="ZQ8-3Y-rtb"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_bicycling"/>
+                                        <connections>
+                                            <action selector="bicycling:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HgH-Fb-b17"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h68-Ud-I3c">
+                                        <rect key="frame" x="116" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="h68-Ud-I3c" secondAttribute="height" multiplier="1:1" id="wFH-5X-Ddm"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_driving"/>
+                                        <connections>
+                                            <action selector="driving:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3C-yt-6Ne"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gal-fm-KUt">
+                                        <rect key="frame" x="174" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gal-fm-KUt" secondAttribute="height" multiplier="1:1" id="L9V-Zr-DoT"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_transit"/>
+                                        <connections>
+                                            <action selector="transit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpc-7l-MBr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wbM-3e-tdx"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBT-gD-3q7" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="160.5" width="375" height="506.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL2-f6-xT1">
+                                <rect key="frame" x="16" y="128" width="343" height="20.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="krm-Io-rS7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="3s6-8a-bOf"/>
+                            <constraint firstItem="OL2-f6-xT1" firstAttribute="top" secondItem="krm-Io-rS7" secondAttribute="bottom" constant="12" id="4Q9-W7-sBM"/>
+                            <constraint firstItem="OL2-f6-xT1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="C8p-Fp-5hx"/>
+                            <constraint firstAttribute="trailing" secondItem="EBT-gD-3q7" secondAttribute="trailing" id="TBq-R1-GiM"/>
+                            <constraint firstItem="EBT-gD-3q7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TbW-ws-idl"/>
+                            <constraint firstItem="EBT-gD-3q7" firstAttribute="top" secondItem="OL2-f6-xT1" secondAttribute="bottom" constant="12" id="Yox-PD-DXq"/>
+                            <constraint firstItem="krm-Io-rS7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eab-sU-Rar"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OL2-f6-xT1" secondAttribute="trailing" id="hPD-pk-aL5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EBT-gD-3q7" secondAttribute="bottom" id="vxK-7p-N6j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="moW-sM-sY5"/>
+                    <connections>
+                        <outlet property="detailDirection" destination="OL2-f6-xT1" id="K1Q-JB-8Yx"/>
+                        <outlet property="mapView" destination="EBT-gD-3q7" id="LIb-Fw-PlG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PeJ-NC-MTr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cnn-67-CWu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7n6-b3-Ppo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UvN-3g-0aI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJN-PW-CAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_bicycling" width="50" height="50"/>
+        <image name="ic_driving" width="200" height="200"/>
+        <image name="ic_transit" width="256" height="256"/>
+        <image name="ic_walking" width="1428" height="2400"/>
+    </resources>
+</document>
